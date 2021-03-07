@@ -1,15 +1,22 @@
+from flask import Flask, render_template, request, redirect, url_for, flash
 import os
-from flask import Flask
-if os.path.exists("env.py"):
-    import env
+from dotenv import load_dotenv
+import pymongo
 
-    app = Flask(__name__)
+# we can use ObjectId
+from bson.objectid import ObjectId
 
-    @app.route("/")
-    def hello():
-        return "Hello World....again!"
+load_dotenv()
 
-    if __name__ == "__main__":
-        app.run(host=os.environ.get("IP"),
-                port=int(os.environ.get("PORT")),
-                debug=True)
+app = Flask(__name__)
+# assign a secret key to setup sessions
+app.secret_key = os.environ.get('SECRET_KEY')
+
+MONGO_URI = os.environ.get('MONGO_URI')
+DB_NAME = 'Restaurant'
+
+
+
+if __name__ == "__main__":
+    app.run(host=os.environ.get("IP"), port=int(
+        os.environ.get("PORT")), debug=True)
