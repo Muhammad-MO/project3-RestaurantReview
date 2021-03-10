@@ -19,13 +19,22 @@ db = client[DB_NAME]
 
 @app.route('/')
 def show_listings():
-    listings = db.restaurantname.find({}, {
+
+    country = request.args.get('country')
+
+    criteria = {}
+
+    if country:
+        criteria['cuisine.country'] = country
+
+    listings = db.restaurantname.find(criteria, {
         'name': 1,
         'cuisine': 1,
         'ratings': 1
     }).limit(15)
 
-    return render_template('restaurants.template.html', listings=listings)
+    return render_template('restaurants.template.html', listings=listings,
+                           fullpath=request.full_path)
 
 
 if __name__ == '__main__':

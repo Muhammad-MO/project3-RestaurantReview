@@ -15,9 +15,12 @@
 
         <h1>Restaurant Directory</h1>
         <form method = "GET">
-         <input type ="text" name="country" class="form-control" placeholder ="Search for a restaurant to see their reviews">
+         
+         <input type ="text" name="country" class="form-control" placeholder ="Search for a cuisine to see the restaurant reviews">
          <input type="submit" value="search" class="btn btn-primary mt-3"/>
          </form>
+
+         
         <div style ="display:flex;flex-wrap:wrap">
 
         {%for listing in listings %}
@@ -25,8 +28,9 @@
  
   <div class="card-body">
     <h5 class="card-title">Restaurant Name:{{listing.name}}</h5>
-    <p class="card-text">Cuisine:{{listing.cuisine}}</p>
-    <p class="card-text">Ratings:{{listing.ratings}}</p>
+    
+    <p class="card-text">cuisine: {{listing.cuisine.country}}</p>
+    <p class="card-text">Ratings: {{listing.ratings}}</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
