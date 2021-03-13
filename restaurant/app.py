@@ -21,16 +21,23 @@ db = client[DB_NAME]
 def show_listings():
 
     country = request.args.get('country')
+    Address = request.args.get('Address')
 
     criteria = {}
 
     if country:
         criteria['cuisine.country'] = country
 
+    if Address:
+        criteria['location.Address'] = Address
+
     listings = db.restaurantname.find(criteria, {
         'name': 1,
         'cuisine': 1,
-        'ratings': 1
+        'ratings': 1,
+        'location': 1,
+        'images': 1
+
     }).limit(15)
 
     return render_template('restaurants.template.html', listings=listings,
