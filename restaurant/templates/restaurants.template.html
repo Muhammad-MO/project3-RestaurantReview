@@ -23,9 +23,12 @@
         <div>
 
             <input type="text" name="country" class="form-control"
-                placeholder="Search for a cuisine to see the restaurant reviews">
-            <input type="text" name="Address" class="form-control"
-                placeholder="Search for a Restarant based on their location">
+                placeholder="Search for a cuisine (italian,japanese,american,korean,indian or chinese ) to see the restaurant details & reviews">
+          
+            
+
+
+
     </div>
     <input type="submit" value="search" class="btn btn-primary mt-3" />
     </form>
@@ -39,8 +42,12 @@
             <div class="card-body">
                 <h5 class="card-title">Restaurant Name:{{listing.name}}</h5>
                 <p class="card-text">location: {{listing.location.Address}}</p>
+                <p class="card-text">country: {{listing.location.Country}}</p>
                 <p class="card-text">cuisine: {{listing.cuisine.country}}</p>
-                <p class="card-text">Ratings: {{listing.ratings}}</p>
+                <p class="card-text">Grade: {{listing.healthgrade}}</p>
+                <p class="card-text">Price Range: {{listing.price}}</p>
+                <p class="card-text">Reviews: {{listing.reviews}}</p>
+                
 
             </div>
         </div>
