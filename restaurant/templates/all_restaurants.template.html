@@ -1,0 +1,45 @@
+
+{% extends 'base.template.html' %}
+
+{%block content%}
+
+
+<h1>Restaurant Directory</h1>
+<form method="GET">
+        <div>
+
+            <input type="text" name="flavour" class="form-control"
+                placeholder="Search for a cuisine (italian,japanese,american,korean,indian or chinese ) to see the restaurant details & reviews">
+
+        </div>
+    <input type="submit" value="search" class="btn btn-primary mt-3" />
+    </form>  
+    
+    <a href="{{url_for('show_create_restaurant')}}" class="btn btn-primary mb-2 mt-2">Add Restaurant</a>
+
+     <div style="display:flex;flex-wrap:wrap">
+
+        {%for listing in listings %}
+        <div class="card m-3" style="width: 20rem;">
+            <img class="card-img-top" src="{{listing.images}}" alt="image">
+            <div class="card-body">
+                <h5 class="card-title">Restaurant Name:{{listing.name}}</h5>
+                <p class="card-text">location: {{listing.location.Address}}</p>
+                <p class="card-text">Country: {{listing.location.Country}}</p>
+                <p class="card-text">Cuisine: {{listing.cuisine.flavour}}</p>
+                <p class="card-text">Ratings: {{listing.ratings}}</p>
+                <p class="card-text">Healthgrade: {{listing.healthgrade}}</p>
+                <p class="card-text">Price Range: {{listing.price}}</p>
+                <p class="card-text">Reviews: {{listing.reviews}}</p>
+                
+
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+
+    
+
+    {%endblock%}
+
+          
