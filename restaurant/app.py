@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import os
 import pymongo
 from dotenv import load_dotenv
+from bson.objectid import ObjectId
 
 load_dotenv()
 
@@ -65,6 +66,7 @@ def process_create_restaurant():
             "flavour": flavour,
         },
         "ratings": ratings,
+        "healthgrade": healthgrade,
         "location": {
             "Address": Address,
             "Country": Country
@@ -76,7 +78,23 @@ def process_create_restaurant():
     return redirect(url_for('show_listings'))
 
 
+@app.route('/restaurant/<name_id>/delete')
+def delete_restaurant(name_id):
+    # find the animal that we want to delete
+    Restaurant = db.restaurantname.find_one({
+        '_id': ObjectId(name_id)
+    })
 
+    return render_template('confirm_delete_restaurant.template.html',
+                           restaurant_to_delete=Restaurant)
+
+
+@app.route('/restaurant/<name_id>/delete', methods=['POST'])
+def process_delete_restaurant(name_id):
+    db.restaurantname.remove({
+        "_id": ObjectId(name_id)
+    })
+    return redirect(url_for('show_listings'))
 
 
 if __name__ == '__main__':
