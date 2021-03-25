@@ -1,0 +1,62 @@
+{% extends 'base.template.html'%}
+
+{%block content%}
+
+<h1> Update Restaurant: {{restaurant_to_edit.name}}</h1>
+
+
+
+<form method="POST">
+    <div>
+        <label class="form-label">Restaurant:</label>
+        <input type="text" name="name" value="{{restaurant_to_edit.name}}" class="form-control" />
+    </div>
+
+    <div>
+        <label class="form-label">Location:</label>
+        <input type="text" name="Address" value="{{restaurant_to_edit.Address}}" class="form-control" />
+    </div>
+
+    <div>
+        <label class="form-label">Country:</label>
+        <input type="text" name="Country" value="{{restaurant_to_edit.Country}}" class="form-control" />
+    </div>
+
+
+    <div>
+        <label class="form-label">Cuisine:</label>
+        <input type="text" name="flavour" value="{{restaurant_to_edit.flavour}}" class="form-control" />
+    </div>
+
+    <div>
+        <label class="form-label">Ratings: </label>
+        <input type="text" name="ratings" value="{{restaurant_to_edit.ratings}}" class="form-control" />
+    </div>
+
+    <div>
+        <label class="form-label">Healthgrade: </label>
+        <input type="text" name="healthgrade" value="{{restaurant_to_edit.Healthgrade}}" class="form-control" />
+    </div>
+
+    <div>
+        <label class="form-label">Price Range: </label>
+        <input type="text" name="price" value="{{restaurant_to_edit.price}}" class="form-control" />
+    </div>
+
+    <div>
+        <label class="form-label">Reviews: </label>
+        <input type="text" name="reviews" value="{{restaurant_to_edit.reviews}}" class="form-control" />
+    </div>
+
+
+
+
+
+
+    <input type="submit" value="Update Restaurant" class="mt-3 btn btn-primary" />
+    <a href="{{url_for('show_listings')}}" class="btn btn-primary mb-2 mt-2">Home</a>
+
+</form>
+
+
+{%endblock%}

@@ -97,5 +97,29 @@ def process_delete_restaurant(name_id):
     return redirect(url_for('show_listings'))
 
 
+@app.route('/restaurant/<name_id>/update')
+def update_restaurant(name_id):
+
+    restaurant_to_edit = db.restaurantname.find_one({
+        '_id': ObjectId(name_id)
+    })
+
+    return render_template('update_restaurant.template.html',
+                           restaurant_to_edit=restaurant_to_edit)
+
+
+@app.route('/restaurant/<name_id>/update', methods=["POST"])
+def process_update_restaurant(name_id):
+    db.restaurantname.update_one({
+        "_id": ObjectId(name_id)
+
+    }, {
+
+        '$set': request.form
+    })
+    return redirect(url_for('show_listings'))
+
+
 if __name__ == '__main__':
-    app.run(host=os.environ.get('IP'), port=os.environ.get('PORT'), debug=True)
+    app.run(host=os.environ.get('IP'),
+            port=os.environ.get('PORT'), debug=True)
