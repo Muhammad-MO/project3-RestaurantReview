@@ -7,8 +7,6 @@ from bson.objectid import ObjectId
 load_dotenv()
 
 
-load_dotenv()
-
 app = Flask(__name__)
 
 MONGO_URI = os.environ.get('MONGO_URI')
@@ -118,6 +116,46 @@ def process_update_restaurant(name_id):
         '$set': request.form
     })
     return redirect(url_for('show_listings'))
+
+
+@app.route('/feedback')
+def show_comments():
+
+    criteria = {}
+
+    comments = db.feedback.find(criteria, {
+        'name': 1,
+        'mobile': 1,
+        'restaurant_name': 1,
+        'reviews': 1
+
+    }).limit(100)
+
+    return render_template('customer_feedback_template.html',
+                           comments=comments, fullpath=request.full_path)
+
+
+@app.route('/create2')
+def show_create_comment():
+    return render_template('create_customer_feedback.template.html')
+
+
+@app.route('/create2', methods=["POST"])
+def process_create_comment():
+    name = request.form.get('name')
+    mobile = request.form.get('mobile')
+    restaurant_name = request.form.get('restaurant_name')
+    reviews = request.form.get('reviews')
+
+    db.feedback.insert({
+        "name": name,
+        "mobile": mobile,
+        "restaurant_name": restaurant_name,
+        "reviews": reviews
+
+    })
+
+    return redirect(url_for('show_comments'))
 
 
 if __name__ == '__main__':
