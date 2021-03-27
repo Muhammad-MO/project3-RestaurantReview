@@ -1,6 +1,6 @@
  
 .text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0);
 }
 
 body {
@@ -13,8 +13,10 @@ label.form-label {
     color: black;
 }
 
-.btn, .btn-large, .btn-small {
+.btn, .btn-large, .btn-small .btn-primary{
  color:black;
  background-color: #2196f3 ;
+ height:50px;
 }
+
 
