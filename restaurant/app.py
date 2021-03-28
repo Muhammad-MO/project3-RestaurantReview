@@ -158,6 +158,21 @@ def process_create_comment():
     return redirect(url_for('show_comments'))
 
 
+@app.route('/deals')
+def show_deals():
+
+    criteria = {}
+
+    offers = db.deals.find(criteria, {
+        'name': 1,
+        'deals': 1,
+        'image': 1
+
+    }).limit(50)
+    return render_template('deals_template.html',
+                           offers=offers, fullpath=request.full_path)
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=os.environ.get('PORT'), debug=True)
