@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/images//favicon-16x16.png">
+    <link rel="manifest" href="restaurant/site.webmanifest">
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,6 +51,8 @@
 		</ul>
 	</header>
     <div class = "container">
+        
+
         {% block content %} 
         {%endblock%}
 
@@ -58,6 +66,16 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+   <script>
+function Myfunction() {
+    alert("Restaurant added successfully");
+  }
+
+function Myfunction2() {
+    alert("Feedback added successfully");
+  }
+   </script>
+  
     {% block scripts %}
     {% endblock %}
   </body>
