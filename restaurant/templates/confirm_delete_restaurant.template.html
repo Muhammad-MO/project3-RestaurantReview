@@ -7,7 +7,9 @@
         Are you sure you want to delete {{restaurant_to_delete.name}}?
     </div>
     <div>
-        <input type="submit" value="Delete" class="btn btn-danger"/>
+        <input type="submit" value="Delete" onclick="Myfunction3()" class="btn btn-danger"/>
+   
+
         <a href="{{ url_for('show_listings')}}" class="btn btn-success">No, don't delete</a>
     </div>
 
