@@ -5,27 +5,27 @@
 
 body {
 
-    background-color:#b9f6ca ;
+    background-image:url('/static/images/restaurant.jpeg');
  }
 
-label.form-label {
-    font-size: 20px;
-    color: black;
-}
 
+/*buttom styles*/
 .btn, .btn-large, .btn-small .btn-primary{
- color:black;
- background-color: #2196f3 ;
+ color:white;
+ background-color:#514039 ;
  height:50px;
- border-radius:24px;
+ border-radius:20px;
+
 }
-
-
+/* header styles */
 h1{
 
     font-family: 'Dancing Script', cursive;
+    color:white;
 }
 
+
+/*Nav bar styles */
 nav ul a {
     -webkit-transition: background-color .3s;
   
@@ -34,4 +34,35 @@ nav ul a {
     display: block;
     padding: 0 15px;
     cursor: pointer;
+}
+
+/*styles for form*/
+
+
+label.form-label {
+    font-size: 20px;
+    color: white;
+    background-color:#292724
+}
+
+input:not([type]), input[type=text]:not(.browser-default), 
+input[type=password]:not(.browser-default), 
+input[type=email]:not(.browser-default), 
+input[type=url]:not(.browser-default), 
+input[type=time]:not(.browser-default), 
+input[type=date]:not(.browser-default), 
+input[type=datetime]:not(.browser-default), 
+input[type=datetime-local]:not(.browser-default), 
+input[type=tel]:not(.browser-default), i
+nput[type=number]:not(.browser-default), 
+input[type=search]:not(.browser-default), 
+textarea.materialize-textarea 
+{
+    background-color: white;
+}
+
+/* card styles*/
+.card-body{
+
+ background-color:#A49B96;
 }
