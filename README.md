@@ -5,7 +5,7 @@ I took the opportunity to create an restaurant database search engine where user
 type of cuisine (e.g Italian, chinese, japanese, american etc..).
 Users are also able create feedback and have it displayed under Feedback page and have the ability to delete and update restaurant
 
-![picture](static/images/sreenshot1.png)
+![picture](static/images/screenshot1.png)
 
 # Demo 
 
