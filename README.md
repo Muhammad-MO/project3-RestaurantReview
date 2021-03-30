@@ -69,10 +69,14 @@ The page layout was designed with this deisgn originally as such using Adobe wir
 
 Header includes a logo which when click brings user to homepage.
 The main content section will display the restaurant image and details in a card format
+
 ![picture](restaurant/static/images/screenshot1.png)
 
 Users will be able to search for a restaurant by typing in the type of cuisine.
+
 ![picture](restaurant/static/images/search.png)
+
+
 
 
 
