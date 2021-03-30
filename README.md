@@ -1,9 +1,11 @@
 # About this site.
 
-We were presented with a task to reflect what we have learned about Python and Flaskk and enabling CRUD
-I took the opportunity to create an restaurant database search engine where users can search for restauraunts based on the the
+We were presented with a task to reflect what we have learned about Python and Flaskk and enabling CRUD functions.
+I took the opportunity to create a restaurant database search engine where users can search for restauraunts based on the the
 type of cuisine (e.g Italian, chinese, japanese, american etc..).
-Users are also able create feedback and have it displayed under Feedback page and have the ability to delete and update restaurant
+Users are also able create feedback and have it displayed under feedback page and have the ability to delete any restaurant
+and update certain facts about a restaurant.
+Users also have the ability to add new restaurants to the collection utilizing an add restaurant form.
 
 ![picture](restaurant/static/images/screenshot1.png)
 
@@ -112,9 +114,27 @@ Users can also leave a feedback and see their feedback after submitting the form
 
 ![picture](restaurant/static/images/customerfeedback.png)
 
-Clicking on the deals tab will allow the users to see the current promotion for the different ,but not all restaurants
+Clicking on the deals tab will allow the users to see the current promotion for the different ,but not all restaurants.
 
 ![picture](restaurant/static/images/deals.png)
+
+An alert message will pop out when a restaurant has been successfully added or deleted
+
+![picture](restaurant/static/images/alert.png)
+
+![picture](restaurant/static/images/alert1.png)
+
+The website is responds well to different screen sizes. Images remain sharp and not squished
+
+Navigation bar transforms into a collapsible hamburger button and the side menu appears when the
+hamburger button is clicked
+
+![picture](restaurant/static/images/responsive.png)
+![picture](restaurant/static/images/menu_side.png)
+
+
+
+
 
 
 
