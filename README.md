@@ -65,19 +65,56 @@ References,Javascript and bootstrap codes were used from the following websites
 <h2> ********** Layout and Design ********** </h2>
 
 The page layout was designed with this deisgn originally as such using Adobe wireframe
+
 ![picture](restaurant/static/images/wireframe_layout.png)
 
-Header includes a logo which when click brings user to homepage.
+The final outcome of the webpage was achieved as intended
 The main content section will display the restaurant image and details in a card format
 
+The database was created using MongoDB containing 3 collections
+
+![picture](restaurant/static/images/mongoDB.png)
+
 ![picture](restaurant/static/images/screenshot1.png)
+
+<h2> ********** Testing & Operation ********** </h2>
+
+The navigation bar allows the user to easily navigate throughout the website.
+the links and button changes in color when a mouse is hovered above them.
+
+![picture](restaurant/static/images/navigation.png)
+
+![picture](restaurant/static/images/button.png)
 
 Users will be able to search for a restaurant by typing in the type of cuisine.
 
 ![picture](restaurant/static/images/search.png)
 
+Searching by cusine will return to the user the restaaurants that serve the type of cuisine searched
 
+![picture](restaurant/static/images/searchresult.png)
 
+Users will also be allowed to delete and asked to confirm if they want to delete the restaurant
+
+![picture](restaurant/static/images/deleterest.png)
+
+![picture](restaurant/static/images/deleteconfirmation.png)
+
+There is also a feature for the user to update the restaurant
+
+![picture](restaurant/static/images/updaterest.png)
+
+![picture](restaurant/static/images/updateform.png)
+
+Users can also leave a feedback and see their feedback after submitting the form
+
+![picture](restaurant/static/images/feedbackform.png)
+
+![picture](restaurant/static/images/customerfeedback.png)
+
+Clicking on the deals tab will allow the users to see the current promotion for the different ,but not all restaurants
+
+![picture](restaurant/static/images/deals.png)
 
 
 
