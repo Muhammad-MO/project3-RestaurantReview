@@ -8,6 +8,7 @@ load_dotenv()
 
 
 app = Flask(__name__)
+app.secret_key = os.environ.get('SECRET_KEY')
 
 MONGO_URI = os.environ.get('MONGO_URI')
 DB_NAME = 'Restaurant'
@@ -58,22 +59,36 @@ def process_create_restaurant():
     price = request.form.get('price')
     reviews = request.form.get('reviews')
 
-    db.restaurantname.insert_one({
-        "name": name,
-        "cuisine": {
-            "flavour": flavour,
-        },
-        "ratings": ratings,
-        "healthgrade": healthgrade,
-        "location": {
-            "Address": Address,
-            "Country": Country
-        },
-        "price": price,
-        "reviews": reviews
-    })
+    errors = {}
 
-    return redirect(url_for('show_listings'))
+    if len(name) == 0:
+        # the key of the key/value pair is the type of the error
+        # and the value is what we want to display to the user
+        errors['name_is_blank'] = "Restaurant name cannot be blank"
+
+    if len(errors) == 0:
+
+        db.restaurantname.insert_one({
+            "name": name,
+            "cuisine": {
+                "flavour": flavour,
+            },
+            "ratings": ratings,
+            "healthgrade": healthgrade,
+            "location": {
+                "Address": Address,
+                "Country": Country
+            },
+            "price": price,
+            "reviews": reviews
+        })
+
+        return redirect(url_for('show_listings'))
+
+    else:
+        # redisplay the create animal form template if there is an error
+        # we also pass in the errors to the template as well
+        return render_template('create_restaurant.template.html')
 
 
 @app.route('/restaurant/<name_id>/delete')
