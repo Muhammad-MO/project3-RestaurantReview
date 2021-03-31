@@ -16,7 +16,7 @@ client = pymongo.MongoClient(MONGO_URI)
 db = client[DB_NAME]
 
 
-@app.route('/restaurants')
+@app.route('/')
 def show_listings():
 
     flavour = request.args.get('flavour')
