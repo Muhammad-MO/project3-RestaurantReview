@@ -5,7 +5,8 @@
 
 body {
 
-    background-image:url('/static/images/restaurant.jpeg');
+    background-color: #a1887f;
+    background-size: cover;
  }
 
 
