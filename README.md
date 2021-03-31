@@ -68,7 +68,7 @@ References,Javascript and bootstrap codes were used from the following websites
 
 The page layout was designed with this deisgn originally as such using Adobe wireframe
 
-![picture](restaurant/static/images/wireframe_layout.png)
+![picture](restaurant/static/images/wireframe1.png)
 
 The final outcome of the webpage was achieved as intended
 The main content section will display the restaurant image and details in a card format
