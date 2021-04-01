@@ -137,7 +137,9 @@ def process_update_restaurant(name_id):
     db.restaurantname.update_one({
         "_id": ObjectId(name_id)
 
-    }, {
+    }, 
+    
+    {
 
         '$set': request.form
     })
