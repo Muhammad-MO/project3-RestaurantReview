@@ -119,9 +119,11 @@ Users can also leave a feedback and see their feedback after submitting the form
 
 Users are also able to update details on the restaurant.
 
+![picture](static/images/update.png)
+
 ![picture](static/images/updateform.png)
 
-![picture](static/images/update.png)
+![picture](static/images/updaterest.png)
 
 Clicking on the deals tab will allow the users to see the current promotion for the different ,but not all restaurants.
 

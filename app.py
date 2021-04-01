@@ -136,19 +136,19 @@ def update_restaurant(name_id):
 def process_update_restaurant(name_id):
     db.restaurantname.update_one({
         "_id": ObjectId(name_id)
-
-    }, 
-    
-    {
-
+    },  {
         '$set': request.form
+
+
+
     })
+
     return redirect(url_for('show_listings'))
 
     # routes the user to the feedback landing page
 
 
-@app.route('/feedback')
+@ app.route('/feedback')
 def show_comments():
 
     criteria = {}
@@ -167,12 +167,12 @@ def show_comments():
     # routes user to allow them to create feedback
 
 
-@app.route('/create2')
+@ app.route('/create2')
 def show_create_comment():
     return render_template('create_customer_feedback.template.html')
 
 
-@app.route('/create2', methods=["POST"])
+@ app.route('/create2', methods=["POST"])
 def process_create_comment():
     name = request.form.get('name')
     mobile = request.form.get('mobile')
@@ -192,7 +192,7 @@ def process_create_comment():
 # routes user to the deals landing page
 
 
-@app.route('/deals')
+@ app.route('/deals')
 def show_deals():
 
     criteria = {}
