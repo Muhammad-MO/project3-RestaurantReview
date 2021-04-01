@@ -11,9 +11,11 @@ Users also have the ability to add new restaurants to the collection utilizing a
 
 # Demo 
 
+A demo of the page can be seen [here](https://eatplaces.herokuapp.com/) on this link
 
 
-# User Interface
+
+
 
 # Programmig Language used
 1. HTML
@@ -33,6 +35,7 @@ There are also plans to increase the restaurant database and make the site searc
 
 # Deployment
 
+The website was deployed on Heroku and can be seen [here](https://eatplaces.herokuapp.com/)
 
 # Content
 
