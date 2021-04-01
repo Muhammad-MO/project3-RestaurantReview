@@ -7,7 +7,7 @@ Users are also able create feedback and have it displayed under feedback page an
 and update certain facts about a restaurant.
 Users also have the ability to add new restaurants to the collection utilizing an add restaurant form.
 
-![picture](restaurant/static/images/screenshot1.png)
+![picture](/static/images/screenshot1.png)
 
 # Demo 
 
@@ -75,62 +75,62 @@ The main content section will display the restaurant image and details in a card
 
 The database was created using MongoDB containing 3 collections
 
-![picture](restaurant/static/images/mongoDB.png)
+![picture](static/images/mongoDB.png)
 
-![picture](restaurant/static/images/screenshot1.png)
+![picture](static/images/screenshot1.png)
 
 <h2> ********** Testing & Operation ********** </h2>
 
 The navigation bar allows the user to easily navigate throughout the website.
 the links and button changes in color when a mouse is hovered above them.
 
-![picture](restaurant/static/images/navigation.png)
+![picture](static/images/navigation.png)
 
-![picture](restaurant/static/images/button.png)
+![picture](static/images/button.png)
 
 Users will be able to search for a restaurant by typing in the type of cuisine.
 
-![picture](restaurant/static/images/search.png)
+![picture](static/images/search.png)
 
 Searching by cusine will return to the user the restaaurants that serve the type of cuisine searched
 
-![picture](restaurant/static/images/searchresult.png)
+![picture](static/images/searchresult.png)
 
 Users will also be allowed to delete and asked to confirm if they want to delete the restaurant
 
-![picture](restaurant/static/images/deleterest.png)
+![picture](static/images/deleterest.png)
 
-![picture](restaurant/static/images/deleteconfirmation.png)
+![picture](static/images/deleteconfirmation.png)
 
 There is also a feature for the user to update the restaurant
 
-![picture](restaurant/static/images/updaterest.png)
+![picture](static/images/updaterest.png)
 
-![picture](restaurant/static/images/updateform.png)
+![picture](static/images/updateform.png)
 
 Users can also leave a feedback and see their feedback after submitting the form
 
-![picture](restaurant/static/images/feedbackform.png)
+![picture](static/images/feedbackform.png)
 
-![picture](restaurant/static/images/customerfeedback.png)
+![picture](static/images/customerfeedback.png)
 
 Clicking on the deals tab will allow the users to see the current promotion for the different ,but not all restaurants.
 
-![picture](restaurant/static/images/deals.png)
+![picture](static/images/deals.png)
 
 An alert message will pop out when a restaurant has been successfully added or deleted
 
-![picture](restaurant/static/images/alert.png)
+![picture](static/images/alert.png)
 
-![picture](restaurant/static/images/alert1.png)
+![picture](static/images/alert1.png)
 
 The website is responds well to different screen sizes. Images remain sharp and not squished
 
 Navigation bar transforms into a collapsible hamburger button and the side menu appears when the
 hamburger button is clicked
 
-![picture](restaurant/static/images/responsive.png)
-![picture](restaurant/static/images/menu_side.png)
+![picture](static/images/responsive.png)
+![picture](static/images/menu_side.png)
 
 
 
