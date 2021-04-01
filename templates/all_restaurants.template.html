@@ -5,6 +5,7 @@
 
 
 <h1>Restaurant Directory</h1>
+<!-- Search field to allow user to enter types of cuisine-->
 <form method="GET"> 
         <div>
 
@@ -15,7 +16,7 @@
     <input type="submit" value="search" class="btn btn-primary mt-3" />
     </form>  
     
-    
+    <!--Cards displaying list of restaurants-->
 
      <div style="display:flex;flex-wrap:wrap">
 
@@ -31,6 +32,7 @@
                 <p class="card-text">Healthgrade: {{listing.healthgrade}}</p>
                 <p class="card-text">Price Range: {{listing.price}}</p>
                 <p class="card-text">Reviews: {{listing.reviews}}</p>
+            <!-- Buttons to allow user to delete or update restaurant-->
                 
               <a href="{{url_for('delete_restaurant',name_id=listing._id )}}" class="btn btn-primary mb-2 mt-2">Delete Restaurant</a>
               <a href="{{url_for('update_restaurant',name_id=listing._id )}}" class="btn btn-primary mb-2 mt-2">Update Restaurant</a>

@@ -58,3 +58,11 @@ input:not([type]), input[type=text]:not(.browser-default)
 
  background-color:#A49B96;
 }
+
+.alert-primary {
+    color:black;
+    background-color: #efebe9 ;
+    border-color:#efebe9 ;
+    font-size:20px;
+    border-radius: 1rem;
+}

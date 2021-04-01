@@ -16,6 +16,8 @@ DB_NAME = 'Restaurant'
 client = pymongo.MongoClient(MONGO_URI)
 db = client[DB_NAME]
 
+# routes to main page of website
+
 
 @app.route('/')
 def show_listings():
@@ -42,6 +44,8 @@ def show_listings():
     return render_template('all_restaurants.template.html', listings=listings,
                            fullpath=request.full_path)
 
+# routes to page allowing users to add new restaurants
+
 
 @app.route('/create')
 def show_create_restaurant():
@@ -61,6 +65,7 @@ def process_create_restaurant():
 
     errors = {}
 
+# if statemrnts to validate if the name field is entered
     if len(name) == 0:
         # the key of the key/value pair is the type of the error
         # and the value is what we want to display to the user
@@ -91,10 +96,12 @@ def process_create_restaurant():
         # we also pass in the errors to the template as well
         return render_template('create_restaurant.template.html')
 
+    # routes the user to confirm the deletion of the restaurant
+
 
 @app.route('/restaurant/<name_id>/delete')
 def delete_restaurant(name_id):
-    # find the restaurant that we want to delete
+
     Restaurant = db.restaurantname.find_one({
         '_id': ObjectId(name_id)
     })
@@ -110,6 +117,8 @@ def process_delete_restaurant(name_id):
     })
     flash("Restaurant has been deleted!")
     return redirect(url_for('show_listings'))
+
+    # route to bring user to the page to enable user to update restaurant
 
 
 @app.route('/restaurant/<name_id>/update')
@@ -134,6 +143,8 @@ def process_update_restaurant(name_id):
     })
     return redirect(url_for('show_listings'))
 
+    # routes the user to the feedback landing page
+
 
 @app.route('/feedback')
 def show_comments():
@@ -150,6 +161,8 @@ def show_comments():
 
     return render_template('customer_feedback_template.html',
                            comments=comments, fullpath=request.full_path)
+
+    # routes user to allow them to create feedback
 
 
 @app.route('/create2')
@@ -171,8 +184,10 @@ def process_create_comment():
         "reviews": reviews
 
     })
-    flash("Your Feedback has been created successfully!")
+    flash("Your feedback has been created successfully!")
     return redirect(url_for('show_comments'))
+
+# routes user to the deals landing page
 
 
 @app.route('/deals')
