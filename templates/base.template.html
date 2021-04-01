@@ -52,6 +52,17 @@
 	</header>
     <div class = "container">
         
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert alert-primary">
+            <ul>
+                {%for m in messages %}
+                    <li>{{m}}</li>
+                {%endfor%}
+            </ul>
+        </div>
+        {%endif%}
+        {%endwith%}
 
         {% block content %} 
         {%endblock%}
@@ -72,13 +83,19 @@ function Myfunction2() {
     alert("Feedback added successfully");
   }
 
-  function Myfunction3() {
-    alert("Restaurant Deleted successfully");
-  }
 
    </script>
-  
+
+  <script>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {%for m in messages %}
+                    toastr.info("{{m}}")
+                {%endfor%}
+            {%endif%}
+        {% endwith %}
+    </script>
     {% block scripts %}
-    {% endblock %}
+     {%endblock%}
   </body>
 </html>

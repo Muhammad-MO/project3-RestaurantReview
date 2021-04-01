@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 import os
 import pymongo
 from dotenv import load_dotenv
@@ -8,7 +8,7 @@ load_dotenv()
 
 
 app = Flask(__name__)
-app.secret_key = os.environ.get('SECRET_KEY')
+app.secret_key = "hello"
 
 MONGO_URI = os.environ.get('MONGO_URI')
 DB_NAME = 'Restaurant'
@@ -64,6 +64,7 @@ def process_create_restaurant():
     if len(name) == 0:
         # the key of the key/value pair is the type of the error
         # and the value is what we want to display to the user
+        flash("Restaurant name cannot be blank!")
         errors['name_is_blank'] = "Restaurant name cannot be blank"
 
     if len(errors) == 0:
@@ -82,18 +83,18 @@ def process_create_restaurant():
             "price": price,
             "reviews": reviews
         })
-
+        flash("New restaurant has been created successfully!")
         return redirect(url_for('show_listings'))
 
     else:
-        # redisplay the create animal form template if there is an error
+        # redisplay the create restaurant form template if there is an error
         # we also pass in the errors to the template as well
         return render_template('create_restaurant.template.html')
 
 
 @app.route('/restaurant/<name_id>/delete')
 def delete_restaurant(name_id):
-    # find the animal that we want to delete
+    # find the restaurant that we want to delete
     Restaurant = db.restaurantname.find_one({
         '_id': ObjectId(name_id)
     })
@@ -107,6 +108,7 @@ def process_delete_restaurant(name_id):
     db.restaurantname.remove({
         "_id": ObjectId(name_id)
     })
+    flash("Restaurant has been deleted!")
     return redirect(url_for('show_listings'))
 
 
@@ -169,7 +171,7 @@ def process_create_comment():
         "reviews": reviews
 
     })
-
+    flash("Your Feedback has been created successfully!")
     return redirect(url_for('show_comments'))
 
 
