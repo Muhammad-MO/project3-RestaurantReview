@@ -125,8 +125,6 @@ Users are also able to update details on the restaurant.
 
 ![picture](static/images/updaterest.png)
 
-![picture](static/images/updatealert.png)
-
 Clicking on the deals tab will allow the users to see the current promotion for the different ,but not all restaurants.
 
 ![picture](static/images/deals.png)
@@ -148,6 +146,10 @@ The user will be alerted with a flash message when
 3. New restaurant has created 
 
 ![picture](static/images/alertcreation.png)
+
+4. Restaurant has been updated
+
+![picture](static/images/updatealert.png)
 
 The website is responds well to different screen sizes. Images remain sharp and not squished
 
