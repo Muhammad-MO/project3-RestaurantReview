@@ -5,8 +5,9 @@
 
 body {
 
-    background-color: #a1887f;
-    background-size: cover;
+   
+    background-repeat: none;
+    background-image: url('/static/images/background.jpeg');
  }
 
 
@@ -43,7 +44,7 @@ nav ul a {
 label.form-label {
     font-size: 20px;
     color: white;
-    background-color:#292724
+   
 }
 
 input:not([type]), input[type=text]:not(.browser-default)
