@@ -125,6 +125,8 @@ Users are also able to update details on the restaurant.
 
 ![picture](static/images/updaterest.png)
 
+![picture](static/images/updatealert.png)
+
 Clicking on the deals tab will allow the users to see the current promotion for the different ,but not all restaurants.
 
 ![picture](static/images/deals.png)

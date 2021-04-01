@@ -143,6 +143,7 @@ def process_update_restaurant(name_id):
 
     })
 
+    flash("Restaurant has been updated!")
     return redirect(url_for('show_listings'))
 
     # routes the user to the feedback landing page
