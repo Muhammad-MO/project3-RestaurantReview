@@ -68,7 +68,7 @@ References,Javascript and bootstrap codes were used from the following websites
 
 The page layout was designed with this deisgn originally as such using Adobe wireframe
 
-![picture](restaurant/static/images/wireframe1.png)
+![picture](/static/images/wireframe1.png)
 
 The final outcome of the webpage was achieved as intended
 The main content section will display the restaurant image and details in a card format
@@ -77,12 +77,13 @@ The database was created using MongoDB containing 3 collections
 
 ![picture](static/images/mongoDB.png)
 
-![picture](static/images/screenshot1.png)
+![picture](static/images/screenshot.png)
 
 <h2> ********** Testing & Operation ********** </h2>
 
 The navigation bar allows the user to easily navigate throughout the website.
-the links and button changes in color when a mouse is hovered above them.
+the links and button changes in color when a mouse is hovered over them.
+The user can perform restaurant deletion and update restaurant details.
 
 ![picture](static/images/navigation.png)
 
@@ -96,33 +97,34 @@ Searching by cusine will return to the user the restaaurants that serve the type
 
 ![picture](static/images/searchresult.png)
 
-Users will also be allowed to delete and asked to confirm if they want to delete the restaurant
+Users will also be asked to confirm if they want to delete the restaurant
 
-![picture](static/images/deleterest.png)
 
 ![picture](static/images/deleteconfirmation.png)
-
-There is also a feature for the user to update the restaurant
-
-![picture](static/images/updaterest.png)
-
-![picture](static/images/updateform.png)
 
 Users can also leave a feedback and see their feedback after submitting the form
 
 ![picture](static/images/feedbackform.png)
 
-![picture](static/images/customerfeedback.png)
+![picture](static/images/feedback.png)
 
 Clicking on the deals tab will allow the users to see the current promotion for the different ,but not all restaurants.
 
 ![picture](static/images/deals.png)
 
-An alert message will pop out when a restaurant has been successfully added or deleted
+The user will be alerted with a flash message when 
 
-![picture](static/images/alert.png)
+1. Feedback is created
 
-![picture](static/images/alert1.png)
+![picture](static/images/alertfeedback.png)
+
+2. Restaurant has been deleted
+
+![picture](static/images/alertdeletion.png)
+
+3. New restaurant has created 
+
+![picture](static/images/alertcreation.png)
 
 The website is responds well to different screen sizes. Images remain sharp and not squished
 
@@ -132,6 +134,11 @@ hamburger button is clicked
 ![picture](static/images/responsive.png)
 ![picture](static/images/menu_side.png)
 
+<h2> ********** Validation ********** </h2>
+
+An alert message will pop out when a user does not enter the name of the restaurant when he is creating a new restaurant
+
+![picture](static/images/alertblank.png)
 
 
 
