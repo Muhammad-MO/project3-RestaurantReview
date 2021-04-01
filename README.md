@@ -88,6 +88,7 @@ The navigation bar allows the user to easily navigate throughout the website.
 the links and button changes in color when a mouse is hovered over them.
 The user can perform restaurant deletion and update restaurant details.
 
+
 ![picture](static/images/navigation.png)
 
 ![picture](static/images/button.png)
@@ -102,8 +103,13 @@ Searching by cusine will return to the user the restaaurants that serve the type
 
 Users will also be asked to confirm if they want to delete the restaurant
 
-
 ![picture](static/images/deleteconfirmation.png)
+
+Users have the ability to add new restaurants to the collection
+
+![picture](static/images/addnewrest.png)
+
+![picture](static/images/newrest.png)
 
 Users can also leave a feedback and see their feedback after submitting the form
 
@@ -111,9 +117,19 @@ Users can also leave a feedback and see their feedback after submitting the form
 
 ![picture](static/images/feedback.png)
 
+Users are also able to update details on the restaurant.
+
+![picture](static/images/updateform.png)
+
+![picture](static/images/update.png)
+
 Clicking on the deals tab will allow the users to see the current promotion for the different ,but not all restaurants.
 
 ![picture](static/images/deals.png)
+
+Overall the C.R.U.D capibilities are in place and performs to expectation
+
+<h2> ********** Alert Messages ********** </h2>
 
 The user will be alerted with a flash message when 
 
