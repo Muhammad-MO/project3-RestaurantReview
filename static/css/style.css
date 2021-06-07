@@ -15,9 +15,12 @@ body {
 .btn, .btn-large, .btn-small .btn-primary{
  color:white;
  background-color:#514039 ;
+ 
  height:50px;
  border-radius:20px;
  vertical-align:middle;
+ padding-bottom:20px;
+
 
 }
 /* header styles */

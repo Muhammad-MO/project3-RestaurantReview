@@ -6,15 +6,11 @@
 
 <h1> Update Restaurant: {{restaurant_to_edit.name}}</h1>
 
-
-
 <form method="POST">
     <div>
         <label class="form-label">Restaurant:</label>
         <input type="text" name="name" value="{{restaurant_to_edit.name}}" class="form-control" />
     </div>
-
-     
 
     <div>
         <label class="form-label">Ratings: </label>
@@ -25,8 +21,6 @@
         <label class="form-label">Healthgrade: </label>
         <input type="text" name="healthgrade" value="{{restaurant_to_edit.healthgrade}}" class="form-control" />
     </div>
-
-    
 
     <div>
         <label class="form-label">Price Range: </label>
@@ -43,6 +37,5 @@
     <a href="{{url_for('show_listings')}}" class="btn btn-primary mb-3 mt-3">Home</a>
 
 </form>
-
 
 {%endblock%}
