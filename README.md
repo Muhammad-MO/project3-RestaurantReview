@@ -8,6 +8,7 @@ and update certain facts about a restaurant.
 Users also have the ability to add new restaurants to the collection utilizing a create restaurant form.
 
 ![picture](/static/images/screenshot.png)
+![picture](/static/images/screenshot2.png)
 
 # Demo 
 
@@ -36,6 +37,33 @@ There are also plans to increase the restaurant database and make the site searc
 # Deployment
 
 The website was deployed on Heroku and can be seen [here](https://eatplaces.herokuapp.com/)
+
+Several steps were taken to ensure a smoooth Deployment
+1) Debug was set to false
+
+2) Heroku had to be installed in th bash terminal of Gitpod
+(brew tap heroku/brew && brew install heroku)
+
+3) Logging into Heroku was cried out after downloading Heroku,
+heroku login -i
+
+4) Requirements.txt also needed to be installed
+
+5) A heroko app name was created.
+heroku create <eatplaces>
+
+6) gunicorn was installed so that my python application could return.
+  pip3 install gunicorn
+
+7) Created New remote
+
+8) A Procfile had to be created. In the Procile, the following was inserted:
+web gunicorn app:app
+
+9) Finally all the new changes were pushed Validation
+  git add .
+  git commit -m "Commit messsage"
+  git push heroku
 
 # Content
 
@@ -82,7 +110,7 @@ The database was created using MongoDB containing 3 collections
 
 ![picture](static/images/screenshot.png)
 
-<h2> ********** Testing & Operation ********** </h2>
+<h2> Testing & Operation</h2>
 
 The navigation bar allows the user to easily navigate throughout the website.
 the links and button changes in color when a mouse is hovered over them.
@@ -93,9 +121,17 @@ The user can perform restaurant deletion and update restaurant details.
 
 ![picture](static/images/button.png)
 
+the hover button function works as inteded.The links change color when a mouse hovers above it.
+
+![picture](static/images/hover1.png)
+![picture](static/images/hover2.png)
+
+
+
 Users will be able to search for a restaurant by typing in the type of cuisine.
 
 ![picture](static/images/search.png)
+![picture](static/images/homesearch.png)
 
 Searching by cusine will return to the user the restaaurants that serve the type of cuisine searched
 
@@ -131,7 +167,7 @@ Clicking on the deals tab will allow the users to see the current promotion for 
 
 Overall the C.R.U.D capibilities are in place and performs to expectation
 
-<h2> ********** Alert Messages ********** </h2>
+<h2> Alert Messages </h2>
 
 The user will be alerted with a flash message when 
 
@@ -151,7 +187,9 @@ The user will be alerted with a flash message when
 
 ![picture](static/images/updatealert.png)
 
-The website is responds well to different screen sizes. Images remain sharp and not squished
+The website is responds well to different screen sizes. Images remain sharp and not squished.
+![picture](static/images/responsiveness1.png)
+![picture](static/images/responsiveness2.png)
 
 Navigation bar transforms into a collapsible hamburger button and the side menu appears when the
 hamburger button is clicked
@@ -159,7 +197,7 @@ hamburger button is clicked
 ![picture](static/images/responsive.png)
 ![picture](static/images/menu_side.png)
 
-<h2> ********** Validation ********** </h2>
+<h2>  Validation  </h2>
 
 An alert message will pop out when a user does not enter the name of the restaurant when he is creating a new restaurant
 
