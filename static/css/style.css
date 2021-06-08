@@ -17,10 +17,9 @@ body {
  background-color:#514039 ;
  
  height:50px;
- border-radius:20px;
+ border-radius:10px;
  vertical-align:middle;
- padding-bottom:20px;
-
+ 
 
 }
 /* header styles */
@@ -96,11 +95,11 @@ input:not([type]), input[type=text]:not(.browser-default)
 .box2{
 
 
-    height:250px;
+    height:200px;
     background-color: transparent;
     margin:10px;
     text-align: center;
-    font-family:
+    font-family: 'Dancing Script', cursive;
 }
 
 .box3{
