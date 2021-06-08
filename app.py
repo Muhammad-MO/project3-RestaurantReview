@@ -19,6 +19,36 @@ db = client[DB_NAME]
 
 
 @app.route('/')
+def show_home():
+
+    flavour = request.args.get('flavour')
+
+    criteria = {} 
+
+    if flavour:
+        criteria['cuisine.flavour'] = flavour
+
+        listings = db.restaurantname.find(criteria, {
+        'name': 1,
+        'healthgrade': 1,
+        'cuisine': 1,
+        'ratings': 1,
+        'location': 1,
+        'images': 1,
+        'price': 1,
+        'reviews': 1
+
+        }).limit(100)
+
+    
+
+        return render_template('all_restaurants.template.html', listings=listings,fullpath=request.full_path)    
+    else:
+         return render_template('home.template.html')
+   
+
+
+@app.route('/directory')
 def show_listings():
 
     flavour = request.args.get('flavour')
@@ -39,6 +69,8 @@ def show_listings():
         'reviews': 1
 
     }).limit(100)
+
+    
 
     return render_template('all_restaurants.template.html', listings=listings,
                            fullpath=request.full_path)
@@ -210,4 +242,4 @@ def show_deals():
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
-            port=os.environ.get('PORT'), debug=True)
+            port=os.environ.get('PORT'), debug=False)
